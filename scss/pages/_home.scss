@@ -1,37 +1,38 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box
-}
+    box-sizing: border-box;
+  }
+  
+  .container {
+    @include widen;
+    background-color: $main-color;
+  }
+  
+  .header {
+    @include section-style(column);
+    align-items: center;
+  }
 
-.container {
-    @include flex-center(column);
-    height: 100vh;
-}
+  .section1 {
+    @include section-style(row);
+    padding: $padding-sides;
+    height: 30px
+  }
 
-.box {
-    @include flex-center;
-    @include box-size;
-}
+  .section2 {
+    @include section-style(row);
+    width: $full-width;
+    padding: $padding-sides;
+  }
 
+  .homeBar {
+    @include section-style(row);
+    width: 70%;
+    list-style: none;
+  }
 
+  .midle {
+    @include set-backgrouund;
 
-
-// .container {
-// @include flex-center;
-// flex-direction: column;
-
-
-// }
-
-// .box {
-//     @include box-style($bg-color: yellow);
-// }
-
-// .box1 {
-//     @include box-style($bg-color);
-// }
-
-// .border-box {
-//     width: 200px;
-// }
+  }

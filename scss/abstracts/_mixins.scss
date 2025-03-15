@@ -1,16 +1,41 @@
-@mixin flex-center($direction: row) {
+@mixin widen {
+    width: $full-width;
+    height: $full-height;
+  }
+  
+  @mixin section-style() {
+    width: $section-width;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: $direction;
-}
+    flex-direction: $flex-direction;
+    justify-content: $justify-space-between;
+  }
 
 
-@mixin box-size($bg-color: rgb(1, 1, 1)) {
-    width: 100px;
-    height: 100px;
-    background-color: $bg-color;
-}
+  @mixin set-backgrouund() {
+    background-image: $background-img;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+// @mixin flex-center($direction: row) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: $direction;
+// }
+
+
+// @mixin box-size($bg-color: rgb(1, 1, 1)) {
+//     width: 100px;
+//     height: 100px;
+//     background-color: $bg-color;
+// }
+
+
+
+
 
 
 // @mixin flex-center($main-color) {
