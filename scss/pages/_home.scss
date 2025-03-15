@@ -1,18 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
 .container {
-@include flex-center;
-flex-direction: column;
-
-
+    @include flex-center(column);
+    height: 100vh;
 }
 
 .box {
-    @include box-style($bg-color: yellow);
+    @include flex-center;
+    @include box-size;
 }
 
-.box1 {
-    @include box-style($bg-color);
-}
 
-.border-box {
-    width: 200px;
-}
+
+
+// .container {
+// @include flex-center;
+// flex-direction: column;
+
+
+// }
+
+// .box {
+//     @include box-style($bg-color: yellow);
+// }
+
+// .box1 {
+//     @include box-style($bg-color);
+// }
+
+// .border-box {
+//     width: 200px;
+// }
