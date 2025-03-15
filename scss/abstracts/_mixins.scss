@@ -1,0 +1,15 @@
+@mixin flex-center($main-color) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    @mixin box-style($bg-color) {
+        width: $child-width;
+        height: $child-height;
+        background-color: $bg-color;
+        border-radius: $border-radius;
+
+    
+    
+}

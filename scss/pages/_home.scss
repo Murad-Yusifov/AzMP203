@@ -1,0 +1,18 @@
+.container {
+@include flex-center;
+flex-direction: column;
+
+
+}
+
+.box {
+    @include box-style($bg-color: yellow);
+}
+
+.box1 {
+    @include box-style($bg-color);
+}
+
+.border-box {
+    width: 200px;
+}
