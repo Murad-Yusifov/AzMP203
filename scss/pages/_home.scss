@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: #ff4a3d;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.service, .feature, .member {
+    margin: 20px 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .about-us, footer .contact-us, footer .newsletter {
+    margin: 20px 0;
+}
+
+footer input[type="email"] {
+    padding: 10px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
