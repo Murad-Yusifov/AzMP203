@@ -3,9 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 .header {
-
     .section1 {
         width: $w;
         height: 70px;
@@ -59,18 +57,18 @@
                 list-style: none;
                 position: absolute;
                 bottom: -10;
+                z-index: 1;
                 transition: 0.4s;
                 li {
                     width: 100%;
                     height: 100%;
                     text-align: center;
-                    opacity: 0.4;
 
                 }
                 li:hover {
                     background-color: #b7b7b8;
-                    opacity: 0.4;
                 }
+
             }
             .free:hover .lang1 {
                 display: flex;
@@ -101,32 +99,149 @@
     .section2 {
         width: $w;
         height: 100px;
+    background-color: white;
+
         @include ajusting($flex-d:row);
         padding: $pding;
         border-bottom: 1px solid rgba(0, 0, 0,0.1);
-        ul {
+        position: sticky;
+        top:0;
+        .logo {
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            cursor: pointer;
+
+            .fa-bars {
+                display: none;
+            }
+        }
+        .list {
             width: 40%;
             @include jc-and-al-it;
             list-style: none;
+            text-transform: uppercase;
+
+
+             li {
+                font-size: 17px;
+                cursor: pointer;
+                transition: .4s ;
+            }
+            li:hover {
+                color: $main-color;
+                transition: .4s;
+            }
+
+          .pages {
+            position: relative;
+         }
+   
+          .elements {
+            display: none;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(209, 208, 208);
+            list-style: none;
+            position: absolute;
+            bottom: -10;
+            transition: 1s;
+          }
+          .pages:hover .elements {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: 0.7s;
+
+          }
+          .blog {
+            position: relative;            
+          }
+          .detail {
+            display: none;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: 1s;
+            background-color: #dfdfdf;
+            position: absolute;
+            bottom: -10;
+          }
+          .detail> li {
+            font-size: 15px;
+            list-style-type: none;
+            font-size: 13px;
+          }
+          .blog:hover .detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            transition: 0.7s;
+          }
         }
     }
+    
+}
+.main {
+    width: 100%;
+    height: 200vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
 }
 
 @media screen and (min-width:300px) and (max-width:576px) {
     .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .section1 {
             display: none;
         }
+        .section2 {
+            width: 100vw;
+            padding: 0 20px;
+
+            .list {
+                display: none;
+            }
+            .logo {
+                width: 90%;
+            @include ajusting($flex-d:row);
+
+                .fa-bars {
+                    display: block;
+                    font-size: 30px;
+                    transition: .6s;
+                    cursor: pointer;
+                }
+                .fa-bars:hover {
+                    color: $main-color;
+                    transition: .6s;
+                }
+            
+                img {
+                    width: 100px;
+                }
+            }
+
+          
+        
+        }
         
     }
-   
+ 
 }
 
-@media screen and (min-width:576px) and (max-width:996px)  {
+
+@media screen and (min-width:577px) and (max-width:996px)  {
     .header {
 
         .section1 {
             padding: 0 60px;
+            height: 60px;
 
             .icon-tab {
                 width: 100px;
@@ -151,5 +266,19 @@
                 }
             }
         }
+        .section2 {
+            @include ajusting;
+            padding: 0 15px;
+            height: 70px;
+            .list {
+                display: none;
+           
+            
+            .fa-bars {
+                display: block;
+                font-size: 30px;
+            }
+        } 
+    }
     }
 }

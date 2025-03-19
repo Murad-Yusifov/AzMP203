@@ -3,11 +3,12 @@
     flex-direction: $flex-d;
     justify-content: $jc;
     align-items: $al-it;
-
+ 
 }
 
-@mixin jc-and-al-it($jc: space-between, $al-it:center) {
+@mixin jc-and-al-it($jc: space-between, $al-it:center, $flex-r:row) {
     display: flex;
+    flex-direction: $flex-r;
     justify-content: $jc;
     align-items: $al-it;
 }
