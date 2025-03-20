@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Oswald, sans-serif ;
+}
+body {
+  width: 100%;
+  height: 100vh;
+
 }
 .header {
     .section1 {
@@ -100,12 +106,13 @@
         width: $w;
         height: 100px;
     background-color: white;
+    position: sticky;
+    top: 0;
 
         @include ajusting($flex-d:row);
         padding: $pding;
         border-bottom: 1px solid rgba(0, 0, 0,0.1);
-        position: sticky;
-        top:0;
+
         .logo {
             width: 150px;
             height: 50px;
@@ -117,14 +124,14 @@
             }
         }
         .list {
-            width: 40%;
+            width: 45%;
             @include jc-and-al-it;
             list-style: none;
             text-transform: uppercase;
 
 
              li {
-                font-size: 17px;
+                font-size: 14px;
                 cursor: pointer;
                 transition: .4s ;
             }
@@ -183,12 +190,169 @@
     
 }
 .main {
-    width: 100%;
-    height: 200vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+   @include ajusting($jc:space-around);
+   @include backg;
+   text-align: center;
+   width: $w;
+   height: 100vh;
+   color: white;
 
+
+   
+
+   .text-area {
+    width: 54%;
+    @include ajusting;
+
+    .dream {
+    background-color: #FAB700; 
+    border-radius: 5px;
+    color: black; 
+    font-weight: 100; 
+    font-size: 25px;
+    }
+    .lorem {
+        font-size: 14px;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    .btn-now {
+        width: 100%;
+        text-align: center;
+        .now {
+            background-color: rgb(30, 30, 30);
+            color: $main-color;
+            border: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 5px;
+            font-size: 12px;
+            transition: .6s;
+            cursor: pointer;
+
+        }
+        .now:hover {
+            background-color: $main-color;
+            color: white;
+            transition: .6s;
+        }
+
+    }
+   }
+}
+
+.offer {
+    @include ajusting($jc:space-around);
+    width: $w;
+    height: 100vh;
+    .text-offer {
+        @include ajusting;
+        gap: 10px;
+        width: 100%;
+        height: 30px;
+
+        .service {
+            font-size: 25px;
+            font-weight: 900;
+            padding-top: 50px;
+        }
+        .dolor {
+            font-size: 13px;
+        }
+    }
+
+    .cards {
+        width: 100%;
+        height: 80%;
+        @include ajusting($flex-d:row,$jc:space-around);
+        gap: 10px;
+
+        .building-card {
+            @include ajusting($jc:space-evenly);
+            text-align: center;
+            width: 300px;
+            height: 250px;
+            transition: .9s;
+            .drawing {
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .inpus {
+                width: 250px;
+                text-align: center;
+                font-size: 13px;
+                color: rgb(177, 175, 175);
+            }
+
+        }
+        .building-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 5px 5px rgb(188, 187, 187);
+
+            transition: .9s;
+        }
+    }
+}
+.projects {
+    @include ajusting;
+    gap: 10px;
+    .our {
+
+    }
+    .alex {
+        display: grid;
+        grid-template-areas: 'myArea myImage myBuilding'
+        'myArea1 myImage1 myBuilding1';
+        .yellow-text {
+            display: none;
+            transform: scale(.9);
+
+        }
+
+        .it:hover {
+            position: relative;
+            transition: .8s;
+            transition-timing-function: ease;
+
+            .yellow-text {
+                @include ajusting($jc:center);
+                gap: 10px;
+
+                background-color: $main-color;
+                opacity: 0.8;
+                position: absolute;
+                width: $w;
+                height: $w;
+                top: 0;
+            transition: .8s;
+            transform: scale(1);
+
+
+            }
+        }
+     
+        .area1 {
+            width: 100%;
+        }
+        .item1 {
+            grid-area: myArea;
+        }
+        .item2 {
+            grid-area: myImage;
+        }
+        .item3 {
+            grid-area: myBuilding;
+        }
+        .item4 {
+            grid-area: myArea1;
+        }
+        .item5 {
+            grid-area: myImage1;
+        }
+        .item6 {
+            grid-area: myBuilding1;
+        }
+    }
 
 }
 
@@ -232,7 +396,22 @@
         }
         
     }
- 
+
+    .main {
+        width: 100%;
+        height: 50vh;
+        .text-area {
+            width: 300px;
+            height: 300px;
+        
+        }
+    }
+ .offer {
+    @include ajusting;
+    .cards {
+        @include ajusting($flex-d:column);
+    }
+ }
 }
 
 
@@ -274,11 +453,28 @@
                 display: none;
            
             
-            .fa-bars {
-                display: block;
-                font-size: 30px;
-            }
+          
         } 
     }
     }
+
+    .main {
+        width: 100%;
+        height: 70%;
+        .text-area {
+            width: 500px;
+            height: 220px;
+            .lorem {
+                font-size: 14px;
+                padding: 0;
+            }
+        }
+    }
+    .offer {
+        @include ajusting;
+
+        .cards {
+            @include ajusting($flex-d:column);
+        }
+     }
 }

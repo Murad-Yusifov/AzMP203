@@ -21,3 +21,11 @@
      width: $btn-w;
     height: $btn-h;
 }
+// backgroun image size
+
+@mixin backg{
+    background-image: $bg-image;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+  
+}
