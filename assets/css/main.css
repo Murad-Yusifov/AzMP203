@@ -306,20 +306,37 @@ body {
   align-items: center;
   gap: 10px;
 }
-.projects .alex {
+.projects .our {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  height: 120px;
+}
+.projects .latest {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+.projects .latest .alex {
   display: grid;
   grid-template-areas: "myArea myImage myBuilding" "myArea1 myImage1 myBuilding1";
 }
-.projects .alex .yellow-text {
+.projects .latest .alex .yellow-text {
   display: none;
   transform: scale(0.9);
 }
-.projects .alex .it:hover {
+.projects .latest .alex .it:hover {
   position: relative;
   transition: 0.8s;
   transition-timing-function: ease;
 }
-.projects .alex .it:hover .yellow-text {
+.projects .latest .alex .it:hover .yellow-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -334,25 +351,25 @@ body {
   transition: 0.8s;
   transform: scale(1);
 }
-.projects .alex .area1 {
+.projects .latest .alex .area1 {
   width: 100%;
 }
-.projects .alex .item1 {
+.projects .latest .alex .item1 {
   grid-area: myArea;
 }
-.projects .alex .item2 {
+.projects .latest .alex .item2 {
   grid-area: myImage;
 }
-.projects .alex .item3 {
+.projects .latest .alex .item3 {
   grid-area: myBuilding;
 }
-.projects .alex .item4 {
+.projects .latest .alex .item4 {
   grid-area: myArea1;
 }
-.projects .alex .item5 {
+.projects .latest .alex .item5 {
   grid-area: myImage1;
 }
-.projects .alex .item6 {
+.projects .latest .alex .item6 {
   grid-area: myBuilding1;
 }
 
@@ -398,7 +415,7 @@ body {
   }
   .main .text-area {
     width: 300px;
-    height: 300px;
+    height: 200px;
   }
   .offer {
     display: flex;

@@ -297,8 +297,15 @@ body {
     @include ajusting;
     gap: 10px;
     .our {
-
+width: $w;
+@include ajusting($jc:center);
+gap: 18px;
+height: 120px;
     }
+    .latest {
+        @include ajusting;
+        gap: 30px;
+        width: $w;
     .alex {
         display: grid;
         grid-template-areas: 'myArea myImage myBuilding'
@@ -353,6 +360,7 @@ body {
             grid-area: myBuilding1;
         }
     }
+}
 
 }
 
@@ -402,7 +410,7 @@ body {
         height: 50vh;
         .text-area {
             width: 300px;
-            height: 300px;
+            height: 200px;
         
         }
     }
@@ -477,4 +485,6 @@ body {
             @include ajusting($flex-d:column);
         }
      }
+
+     
 }
