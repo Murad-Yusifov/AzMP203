@@ -363,6 +363,115 @@ height: 120px;
 }
 
 }
+.expert {
+    @include ajusting;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 100px;
+
+    .meet {
+        text-align: center;
+        height: 100px;
+
+        .we {
+            font-size: 35px;
+        }
+
+        .eco {
+            font-size: 15px;
+            color: #959595;
+        }
+    }
+
+    .cards-Box {
+        width: 90%;
+        @include ajusting(row, space-around, center); // Horizontal alignment
+        flex-wrap: wrap; // Wrap cards if they don’t fit
+        gap: 20px; // Add spacing between cards
+
+        .card-Box {
+            width: 30%;
+            height: 50%;
+      
+
+            @include ajusting(column, space-between, center); 
+
+            .image-Box {
+                width: 100%;
+                height: 240px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                transition: .8s;
+
+                .icons {
+                    display: none;
+                overflow: hidden;
+                font-size: 13px;
+
+                }
+
+
+                .user {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+
+                 
+                }
+            }
+            .image-Box:hover .icons {
+                display: block;
+                transform: scale(0.4) 2s, scale(1.1) 2s;
+                transition: 3s;
+                object-fit: cover;
+
+                @include jc-and-al-it(center);
+                gap: 15px;
+                position: absolute;
+                width: $w;
+                height: $w;
+                color: rgba(0, 0, 0,0.5);
+                background-color: $main-color;
+                opacity: 0.5;
+            }
+            .text-Box {
+                text-align: center;
+                padding: 10px;
+
+                .name {
+                    font-size: 18px;
+                    font-weight: 900;
+                }
+
+                .sale {
+                    font-size: 14px;
+                    color: #959595;
+                }
+            }
+        }
+    }
+}
+.yellowrow {
+    width: $w;
+    height: 35%;
+    @include jc-and-al-it;
+    background-color: $main-color;
+    padding: 30px;
+    .numbers {
+        font-size: 50px;
+        font-weight: 600;
+        padding-bottom: 15px;
+    }
+    .projct {
+        font-size: 15px;
+        color: #1e1e1e;
+    }
+
+}
 
 @media screen and (min-width:300px) and (max-width:576px) {
     .header {
@@ -372,15 +481,15 @@ height: 120px;
         .section1 {
             display: none;
         }
-        .section2 {
-            width: 100vw;
-            padding: 0 20px;
-
-            .list {
-                display: none;
-            }
+     .section2 { 
+        width: $w;
+        .list {
+            @include ajusting;
+            gap: 20px;
+            display: none;
+        }   
             .logo {
-                width: 90%;
+                width: 100%;
             @include ajusting($flex-d:row);
 
                 .fa-bars {
@@ -398,6 +507,7 @@ height: 120px;
                     width: 100px;
                 }
             }
+        }
 
           
         
@@ -420,10 +530,52 @@ height: 120px;
         @include ajusting($flex-d:column);
     }
  }
+  .expert {
+    @include ajusting($jc:center);
+    height: 200vh;
+    gap: 30px;
+    .meet {  .we {
+        font-size: 30px;
+    }
+    .eco {
+        font-size: 13px;
+    }
 }
+  
+    .cards-Box {
+        flex-wrap: wrap;
+        .card-Box {
+            width: 45%;
+        
+        }
+    }
+  }
+  .yellowrow {
+    width: $w;
+    height: 100vh;
+    @include ajusting;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    .numbers {
+        font-size: 30px;
+    }
+    .projct {
+        font-size: 10px;
+    }
+  }
+
+  .features {
+    width: $w;
+    height: $h;
+
+  }
 
 
-@media screen and (min-width:577px) and (max-width:996px)  {
+
+
+
+@media screen and (min-width:576px) and (max-width:996px)  {
     .header {
 
         .section1 {
@@ -459,15 +611,27 @@ height: 120px;
             height: 70px;
             .list {
                 display: none;
-           
-            
-          
         } 
+        .logo {
+            @include ajusting(center);
+            width: 90%;
+            .fa-bars {
+                display: block;
+                font-size: 35px;
+                width: 40px;
+                transition: 0.4s;
+
+            }
+            .fa-bars:hover {
+                color: $main-color;
+                transition: 0.4s;
+            }
+            }
     }
     }
 
     .main {
-        width: 100%;
+        width: 100vw;
         height: 70%;
         .text-area {
             width: 500px;
@@ -480,11 +644,68 @@ height: 120px;
     }
     .offer {
         @include ajusting;
-
         .cards {
             @include ajusting($flex-d:column);
         }
      }
+     .latest {
+        width: $w;
+        height: $h;
+     }
+     .expert {
+        width: $w;
+        height: 150vh;
+        @include ajusting($jc:center);
+        gap: 30px;
+        .cards-Box {
+            flex-wrap: wrap;
+            .card-Box {
+                width: 180px;
+                height: 320px;
+            
+            }
+        }
+      }
+      .yellowrow {
+        width: $w;
+        height: 100vh;
+        @include jc-and-al-it($jc:space-evenly);
+        text-align: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        .numbers {
+            width: 100px;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .projct {
+            font-size: 15px;
+        }
+      }
+}
 
-     
+@media screen and (min-width:997px) and (max-width:1400px) {
+    .expert {
+        @include ajusting($jc:space-evenly);
+        height: $h;
+        gap: 30px;
+        .cards-Box {
+            .card-Box {
+                width: 200px;
+                height: 330px;
+            }
+      }
+    }
+    .section2 {
+        width: 100vw;
+        padding: 0 20px;
+
+        .list {
+            font-size: 10px;
+        }
+    }
+    .mian {
+        width: $w;
+        height: 100vh;
+    }
 }

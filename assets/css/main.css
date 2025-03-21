@@ -373,6 +373,114 @@ body {
   grid-area: myBuilding1;
 }
 
+.expert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 100px;
+}
+.expert .meet {
+  text-align: center;
+  height: 100px;
+}
+.expert .meet .we {
+  font-size: 35px;
+}
+.expert .meet .eco {
+  font-size: 15px;
+  color: #959595;
+}
+.expert .cards-Box {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.expert .cards-Box .card-Box {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.expert .cards-Box .card-Box .image-Box {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.8s;
+}
+.expert .cards-Box .card-Box .image-Box .icons {
+  display: none;
+  overflow: hidden;
+  font-size: 13px;
+}
+.expert .cards-Box .card-Box .image-Box .user {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.expert .cards-Box .card-Box .image-Box:hover .icons {
+  display: block;
+  transform: scale(0.4) 2s, scale(1.1) 2s;
+  transition: 3s;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #FAB700;
+  opacity: 0.5;
+}
+.expert .cards-Box .card-Box .text-Box {
+  text-align: center;
+  padding: 10px;
+}
+.expert .cards-Box .card-Box .text-Box .name {
+  font-size: 18px;
+  font-weight: 900;
+}
+.expert .cards-Box .card-Box .text-Box .sale {
+  font-size: 14px;
+  color: #959595;
+}
+
+.yellowrow {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAB700;
+  padding: 30px;
+}
+.yellowrow .numbers {
+  font-size: 50px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.yellowrow .projct {
+  font-size: 15px;
+  color: #1e1e1e;
+}
+
 @media screen and (min-width: 300px) and (max-width: 576px) {
   .header {
     display: flex;
@@ -383,14 +491,18 @@ body {
     display: none;
   }
   .header .section2 {
-    width: 100vw;
-    padding: 0 20px;
+    width: 100%;
   }
   .header .section2 .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     display: none;
   }
   .header .section2 .logo {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -409,28 +521,74 @@ body {
   .header .section2 .logo img {
     width: 100px;
   }
-  .main {
-    width: 100%;
-    height: 50vh;
-  }
-  .main .text-area {
-    width: 300px;
-    height: 200px;
-  }
-  .offer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .offer .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
-@media screen and (min-width: 577px) and (max-width: 996px) {
+.main {
+  width: 100%;
+  height: 50vh;
+}
+.main .text-area {
+  width: 300px;
+  height: 200px;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.offer .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  gap: 30px;
+}
+.expert .meet .we {
+  font-size: 30px;
+}
+.expert .meet .eco {
+  font-size: 13px;
+}
+.expert .cards-Box {
+  flex-wrap: wrap;
+}
+.expert .cards-Box .card-Box {
+  width: 45%;
+}
+
+.yellowrow {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.yellowrow .numbers {
+  font-size: 30px;
+}
+.yellowrow .projct {
+  font-size: 10px;
+}
+
+.features {
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (min-width: 576px) and (max-width: 996px) {
   .header .section1 {
     padding: 0 60px;
     height: 60px;
@@ -466,8 +624,25 @@ body {
   .header .section2 .list {
     display: none;
   }
+  .header .section2 .logo {
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  .header .section2 .logo .fa-bars {
+    display: block;
+    font-size: 35px;
+    width: 40px;
+    transition: 0.4s;
+  }
+  .header .section2 .logo .fa-bars:hover {
+    color: #FAB700;
+    transition: 0.4s;
+  }
   .main {
-    width: 100%;
+    width: 100vw;
     height: 70%;
   }
   .main .text-area {
@@ -489,5 +664,69 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+  .latest {
+    width: 100%;
+    height: 100vh;
+  }
+  .expert {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .expert .cards-Box {
+    flex-wrap: wrap;
+  }
+  .expert .cards-Box .card-Box {
+    width: 180px;
+    height: 320px;
+  }
+  .yellowrow {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .yellowrow .numbers {
+    width: 100px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .yellowrow .projct {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 997px) and (max-width: 1400px) {
+  .expert {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    gap: 30px;
+  }
+  .expert .cards-Box .card-Box {
+    width: 200px;
+    height: 330px;
+  }
+  .section2 {
+    width: 100vw;
+    padding: 0 20px;
+  }
+  .section2 .list {
+    font-size: 10px;
+  }
+  .mian {
+    width: 100%;
+    height: 100vh;
   }
 }
