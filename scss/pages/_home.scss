@@ -194,7 +194,7 @@ body {
    @include backg;
    text-align: center;
    width: $w;
-   height: 100vh;
+   height: $h;
    color: white;
 
 
@@ -244,17 +244,16 @@ body {
 .offer {
     @include ajusting($jc:space-around);
     width: $w;
-    height: 100vh;
     .text-offer {
         @include ajusting;
         gap: 10px;
         width: 100%;
-        height: 30px;
+        height: 90px;
 
         .service {
             font-size: 25px;
             font-weight: 900;
-            padding-top: 50px;
+            padding-top: 25px;
         }
         .dolor {
             font-size: 13px;
@@ -262,16 +261,17 @@ body {
     }
 
     .cards {
-        width: 100%;
-        height: 80%;
+        width: $w;
+        height: 50%;
         @include ajusting($flex-d:row,$jc:space-around);
+        flex-wrap: wrap;
         gap: 10px;
 
         .building-card {
             @include ajusting($jc:space-evenly);
             text-align: center;
-            width: 300px;
-            height: 250px;
+            width: 250px;
+            height: 190px;
             transition: .9s;
             .drawing {
                 font-size: 18px;
@@ -472,6 +472,64 @@ height: 120px;
     }
 
 }
+.features {
+    width: $w;
+    height: $h;
+    @include ajusting($jc:center,$al-it:center);
+    gap: 20px;
+    flex-wrap: wrap;
+    .some {
+        width: $w;
+        height: 80px;
+        text-align: center;
+    }  
+    .tc {
+        @include ajusting(row,space-around);
+        padding-bottom: 40px;
+           width: 90%; 
+    .technologies {
+        @include ajusting($jc:center);
+        gap: 10px;
+        width: 300px;
+        height: 110px;
+        transition: 0.4s;
+
+      
+         .icon-text {
+            width: $w;
+            @include jc-and-al-it(center);
+            gap: 10px;
+            .fa-user {
+                font-size: 15px;
+            }
+            .usage {
+                font-size: 16px;
+            }
+        }
+        .internet {
+            width: 210px;
+            font-size: 13px;
+            color: #959595;
+            text-align: center;
+
+        }
+        }
+
+        
+        .technologies:hover {
+            transition: 0.4s;
+            transform: scale(1.095);
+            box-shadow: 0px 0px 0px 3px rgba(46, 46, 46, 0.5);
+            transition: 0.4s;
+            .icon-text {
+                color: $main-color;
+            }
+        }       
+           
+       
+        }
+      
+    } 
 
 @media screen and (min-width:300px) and (max-width:576px) {
     .header {
@@ -563,13 +621,42 @@ height: 120px;
     .projct {
         font-size: 10px;
     }
+    .tc {
+        @include ajusting(column,space-around);
+        padding-bottom: 40px;
+           width: 90%;
+          
+    .technologies {
+        @include ajusting($jc:center);
+        gap: 10px;
+        width: 300px;
+        height: 110px;
+        transition: 0.4s;
+
+      
+         .icon-text {
+            width: $w;
+            @include jc-and-al-it(center);
+            gap: 10px;
+            .fa-user {
+                font-size: 15px;
+            }
+            .usage {
+                font-size: 16px;
+            }
+        }
+        .internet {
+            width: 210px;
+            font-size: 13px;
+            color: #959595;
+            text-align: center;
+
+        }
+        }       
+        }
   }
 
-  .features {
-    width: $w;
-    height: $h;
-
-  }
+ 
 
 
 
@@ -631,11 +718,11 @@ height: 120px;
     }
 
     .main {
-        width: 100vw;
-        height: 70%;
+        width: $w;
+        height: 100vh;
         .text-area {
             width: 500px;
-            height: 220px;
+            height: 300px;
             .lorem {
                 font-size: 14px;
                 padding: 0;
@@ -668,14 +755,14 @@ height: 120px;
       }
       .yellowrow {
         width: $w;
-        height: 100vh;
+        height: 50%;
         @include jc-and-al-it($jc:space-evenly);
         text-align: center;
         gap: 20px;
         flex-wrap: wrap;
         .numbers {
             width: 100px;
-            font-size: 60px;
+            font-size: 45px;
             font-weight: bold;
         }
         .projct {
@@ -684,7 +771,7 @@ height: 120px;
       }
 }
 
-@media screen and (min-width:997px) and (max-width:1400px) {
+@media screen and (min-width:996px) and (max-width:1400px) {
     .expert {
         @include ajusting($jc:space-evenly);
         height: $h;
@@ -704,8 +791,26 @@ height: 120px;
             font-size: 10px;
         }
     }
-    .mian {
+    .main {
         width: $w;
         height: 100vh;
+    }
+    .offer {
+        width: $w;
+        height: 80%;
+        @include ajusting($al-it:space-around);
+        .cards {
+            @include ajusting($flex-d:row, $al-it:space-around);
+        }
+    }
+    .yellowrow {
+        height: 50%;
+        @include jc-and-al-it;
+        .numbers {
+            font-size: 40px;
+        }
+        .projct {
+            font-size: 12px;
+        }
     }
 }
