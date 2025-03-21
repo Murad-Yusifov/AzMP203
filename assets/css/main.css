@@ -496,15 +496,7 @@ body {
   height: 80px;
   text-align: center;
 }
-.features .tc {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 40px;
-  width: 90%;
-}
-.features .tc .technologies {
+.features .technologies {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -514,7 +506,7 @@ body {
   height: 110px;
   transition: 0.4s;
 }
-.features .tc .technologies .icon-text {
+.features .technologies .icon-text {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -522,25 +514,25 @@ body {
   align-items: center;
   gap: 10px;
 }
-.features .tc .technologies .icon-text .fa-user {
+.features .technologies .icon-text .fa-user {
   font-size: 15px;
 }
-.features .tc .technologies .icon-text .usage {
+.features .technologies .icon-text .usage {
   font-size: 16px;
 }
-.features .tc .technologies .internet {
+.features .technologies .internet {
   width: 210px;
   font-size: 13px;
   color: #959595;
   text-align: center;
 }
-.features .tc .technologies:hover {
+.features .technologies:hover {
   transition: 0.4s;
   transform: scale(1.095);
   box-shadow: 0px 0px 0px 3px rgba(46, 46, 46, 0.5);
   transition: 0.4s;
 }
-.features .tc .technologies:hover .icon-text {
+.features .technologies:hover .icon-text {
   color: #FAB700;
 }
 
@@ -645,15 +637,7 @@ body {
 .yellowrow .projct {
   font-size: 10px;
 }
-.yellowrow .tc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 40px;
-  width: 90%;
-}
-.yellowrow .tc .technologies {
+.yellowrow .technologies {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -663,7 +647,7 @@ body {
   height: 110px;
   transition: 0.4s;
 }
-.yellowrow .tc .technologies .icon-text {
+.yellowrow .technologies .icon-text {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -671,13 +655,13 @@ body {
   align-items: center;
   gap: 10px;
 }
-.yellowrow .tc .technologies .icon-text .fa-user {
+.yellowrow .technologies .icon-text .fa-user {
   font-size: 15px;
 }
-.yellowrow .tc .technologies .icon-text .usage {
+.yellowrow .technologies .icon-text .usage {
   font-size: 16px;
 }
-.yellowrow .tc .technologies .internet {
+.yellowrow .technologies .internet {
   width: 210px;
   font-size: 13px;
   color: #959595;
