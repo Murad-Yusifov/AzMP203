@@ -485,46 +485,55 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 .features .some {
   width: 100%;
   height: 80px;
   text-align: center;
 }
-.features .technologies {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 300px;
-  height: 110px;
-  transition: 0.4s;
+.features .some .made {
+  font-size: 20px;
 }
-.features .technologies .icon-text {
-  width: 100%;
+.features .tec-midle {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-}
-.features .technologies .icon-text .fa-user {
-  font-size: 15px;
-}
-.features .technologies .icon-text .usage {
-  font-size: 16px;
-}
-.features .technologies .internet {
-  width: 210px;
-  font-size: 13px;
-  color: #959595;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 350px;
   text-align: center;
+}
+.features .tec-midle .technologies {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.features .tec-midle .technologies .icon-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.features .tec-midle .technologies .icon-text .fa-solif {
+  font-size: 20px;
+}
+.features .tec-midle .technologies .icon-text .usage {
+  font-size: 18px;
+}
+.features .tec-midle .technologies .internet {
+  font-size: 15px;
 }
 .features .technologies:hover {
   transition: 0.4s;
@@ -534,6 +543,81 @@ body {
 }
 .features .technologies:hover .icon-text {
   color: #FAB700;
+}
+
+footer {
+  width: 100%;
+  height: 90vh;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .about-all {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+footer .about-all .contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: none;
+  row-gap: 15px;
+  width: 33.3%;
+  height: 70%;
+}
+footer .about-all .newsLetter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: none;
+  row-gap: 25px;
+  width: 33.3%;
+  height: 70%;
+}
+footer .about-all .newsLetter .arrowed {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+footer .about-all .newsLetter .arrowed input {
+  border: none;
+  background-color: transparent;
+  padding: 14px;
+}
+footer .about-all .newsLetter .arrowed .fa-arrow-right {
+  background-color: #FAB700;
+  color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+footer .about-all .about-it {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: none;
+  row-gap: 25px;
+  width: 33.3%;
+  height: 70%;
 }
 
 @media screen and (min-width: 300px) and (max-width: 576px) {
@@ -576,98 +660,106 @@ body {
   .header .section2 .logo img {
     width: 100px;
   }
+  .main {
+    width: 100%;
+    height: 50vh;
+  }
+  .main .text-area {
+    width: 300px;
+    height: 200px;
+  }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .offer .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .expert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    gap: 30px;
+  }
+  .expert .meet .we {
+    font-size: 30px;
+  }
+  .expert .meet .eco {
+    font-size: 13px;
+  }
+  .expert .cards-Box {
+    flex-wrap: wrap;
+  }
+  .expert .cards-Box .card-Box {
+    width: 45%;
+  }
+  .yellowrow {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  .yellowrow .numbers {
+    font-size: 30px;
+  }
+  .yellowrow .projct {
+    font-size: 10px;
+  }
+  .yellowrow .tec-midle {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  .yellowrow .tec-midle .technologies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    height: 110px;
+    transition: 0.4s;
+  }
+  .yellowrow .tec-midle .technologies .icon-text {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .yellowrow .tec-midle .technologies .icon-text .fa-user {
+    font-size: 15px;
+  }
+  .yellowrow .tec-midle .technologies .icon-text .usage {
+    font-size: 16px;
+  }
+  .yellowrow .tec-midle .technologies .internet {
+    width: 210px;
+    font-size: 13px;
+    color: #959595;
+    text-align: center;
+  }
+  .features .some .made {
+    font-size: 25px;
+  }
+  .features .some .system {
+    font-size: 14px;
+    padding-top: 8px;
+  }
 }
-.main {
-  width: 100%;
-  height: 50vh;
-}
-.main .text-area {
-  width: 300px;
-  height: 200px;
-}
-
-.offer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.offer .cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.expert {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 200vh;
-  gap: 30px;
-}
-.expert .meet .we {
-  font-size: 30px;
-}
-.expert .meet .eco {
-  font-size: 13px;
-}
-.expert .cards-Box {
-  flex-wrap: wrap;
-}
-.expert .cards-Box .card-Box {
-  width: 45%;
-}
-
-.yellowrow {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  flex-wrap: nowrap;
-}
-.yellowrow .numbers {
-  font-size: 30px;
-}
-.yellowrow .projct {
-  font-size: 10px;
-}
-.yellowrow .technologies {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 300px;
-  height: 110px;
-  transition: 0.4s;
-}
-.yellowrow .technologies .icon-text {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.yellowrow .technologies .icon-text .fa-user {
-  font-size: 15px;
-}
-.yellowrow .technologies .icon-text .usage {
-  font-size: 16px;
-}
-.yellowrow .technologies .internet {
-  width: 210px;
-  font-size: 13px;
-  color: #959595;
-  text-align: center;
-}
-
 @media screen and (min-width: 576px) and (max-width: 996px) {
   .header .section1 {
     padding: 0 60px;
@@ -763,7 +855,7 @@ body {
   }
   .expert .cards-Box .card-Box {
     width: 180px;
-    height: 320px;
+    height: 275px;
   }
   .yellowrow {
     width: 100%;
@@ -783,6 +875,9 @@ body {
   }
   .yellowrow .projct {
     font-size: 15px;
+  }
+  .features .some .made {
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 996px) and (max-width: 1400px) {
@@ -835,5 +930,8 @@ body {
   }
   .yellowrow .projct {
     font-size: 12px;
+  }
+  .features .some .made {
+    font-size: 35px;
   }
 }

@@ -475,41 +475,74 @@ height: 120px;
 .features {
     width: $w;
     height: $h;
-    @include ajusting($jc:center,$al-it:center);
+    @include ajusting($jc:center,$al-it:center,$flex-d:row);
     gap: 20px;
     flex-wrap: wrap;
+    padding-top: 20px;
     .some {
         width: $w;
         height: 80px;
         text-align: center;
+        .made {
+            font-size: 20px
+        }
     }  
-    .technologies {
-        @include ajusting($jc:center);
-        gap: 10px;
-        width: 300px;
-        height: 110px;
-        transition: 0.4s;
-
-      
-         .icon-text {
-            width: $w;
-            @include jc-and-al-it(center);
-            gap: 10px;
-            .fa-user {
-                font-size: 15px;
+    .tec-midle {
+        @include jc-and-al-it;
+        gap: 20px;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 350px;
+        text-align: center;
+        .technologies {
+            width: 200px;
+            height: 100px;
+            @include ajusting;
+            gap: 15px;
+            .icon-text {
+            @include jc-and-al-it;
+            .fa-solif {
+                font-size: 20px;
             }
             .usage {
-                font-size: 16px;
+                font-size: 18px;
             }
         }
-        .internet {
-            width: 210px;
-            font-size: 13px;
-            color: #959595;
-            text-align: center;
+            .internet {
+                font-size: 15px;
+            }
+        
+           
+        }        
+        
+    // .technologies {
+    //     @include ajusting($jc:center);
+    //     gap: 10px;
+    //     width: 300px;
+    //     height: 110px;
+    //     transition: 0.4s;
 
-        }
-        }
+      
+    //      .icon-text {
+    //         width: $w;
+    //         @include jc-and-al-it(center);
+    //         gap: 10px;
+    //         .fa-user {
+    //             font-size: 15px;
+    //         }
+    //         .usage {
+    //             font-size: 16px;
+    //         }
+    //     }
+    //     .internet {
+    //         width: 210px;
+    //         font-size: 13px;
+    //         color: #959595;
+    //         text-align: center;
+
+    //     }
+    //     }
+    }
 
         
         .technologies:hover {
@@ -526,6 +559,59 @@ height: 120px;
         
       
     } 
+footer {
+   width: $w;
+   height: 90vh;
+   color: white;
+   background-color: black;
+   @include ajusting($jc:space-around);
+   .about-all {
+    width: 90%;
+    height: 80%;
+    @include jc-and-al-it($jc:space-between);
+    gap: 20px;
+    .contact-us {
+        @include ajusting($jc:center,$al-it:none);
+        row-gap: 15px;
+        width: 33.3%;
+        height: 70%;
+    }
+    .newsLetter {
+        @include ajusting($jc:center,$al-it:none);
+        row-gap: 25px;
+        width: 33.3%;
+        height: 70%;
+        .arrowed {
+            width: 90%;
+            height: 40px;
+            @include jc-and-al-it;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            input {
+                border: none;
+                background-color: transparent;
+                padding: 14px;
+            }
+            .fa-arrow-right {
+                background-color: $main-color;
+                color: black;                
+                border-radius: 50%;
+                width: 40px;
+                height: 100%;
+                @include ajusting($jc:center);
+                cursor: pointer;
+            }
+        }
+    }
+    .about-it {
+        @include ajusting($jc:center,$al-it:none);
+        row-gap: 25px;
+        width: 33.3%;
+        height: 70%;
+    }
+   }
+    }
 
 @media screen and (min-width:300px) and (max-width:576px) {
     .header {
@@ -566,85 +652,103 @@ height: 120px;
           
         
         }
-        
-    }
-
-    .main {
-        width: 100%;
-        height: 50vh;
-        .text-area {
-            width: 300px;
-            height: 200px;
-        
+        .main {
+            width: 100%;
+            height: 50vh;
+            .text-area {
+                width: 300px;
+                height: 200px;
+            
+            }
         }
-    }
- .offer {
-    @include ajusting;
-    .cards {
-        @include ajusting($flex-d:column);
-    }
- }
-  .expert {
-    @include ajusting($jc:center);
-    height: 200vh;
-    gap: 30px;
-    .meet {  .we {
-        font-size: 30px;
-    }
-    .eco {
-        font-size: 13px;
-    }
-}
-  
-    .cards-Box {
-        flex-wrap: wrap;
-        .card-Box {
-            width: 45%;
-        
+     .offer {
+        @include ajusting;
+        .cards {
+            @include ajusting($flex-d:column);
         }
-    }
-  }
-  .yellowrow {
-    width: $w;
-    height: 100vh;
-    @include ajusting;
-    text-align: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    .numbers {
-        font-size: 30px;
-    }
-    .projct {
-        font-size: 10px;
-    }          
-    .technologies {
+     }
+      .expert {
         @include ajusting($jc:center);
-        gap: 10px;
-        width: 300px;
-        height: 110px;
-        transition: 0.4s;
-
-      
-         .icon-text {
-            width: $w;
-            @include jc-and-al-it(center);
-            gap: 10px;
-            .fa-user {
-                font-size: 15px;
-            }
-            .usage {
-                font-size: 16px;
-            }
+        height: 200vh;
+        gap: 30px;
+        .meet {  .we {
+            font-size: 30px;
         }
-        .internet {
-            width: 210px;
+        .eco {
             font-size: 13px;
-            color: #959595;
-            text-align: center;
+        }
+    }
+      
+        .cards-Box {
+            flex-wrap: wrap;
+            .card-Box {
+                width: 45%;
+            
+            }
+        }
+      }
+      .yellowrow {
+        width: $w;
+        height: 100vh;
+        @include ajusting;
+        text-align: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        .numbers {
+            font-size: 30px;
+        }
+        .projct {
+            font-size: 10px;
+        }      
+        .tec-midle{    
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        .technologies {
+            @include ajusting($jc:center);
+            gap: 10px;
+            width: 200px;
+            height: 110px;
+            transition: 0.4s;
+    
+          
+             .icon-text {
+                width: $w;
+                @include jc-and-al-it(center);
+                gap: 10px;
+                .fa-user {
+                    font-size: 15px;
+                }
+                .usage {
+                    font-size: 16px;
+                }
+            }
+            .internet {
+                width: 210px;
+                font-size: 13px;
+                color: #959595;
+                text-align: center;
+    
+            }
+            }
+        }
+      }
+      .features {
+        .some {
+            .made {
+                font-size: 25px;
+            }
+            .system {
+                font-size: 14px;
+                padding-top: 8px;
+            }
+            .tec-midle {
 
+            }
         }
-        }
-  }
+    }
+    }
+
 
  
 
@@ -738,7 +842,7 @@ height: 120px;
             flex-wrap: wrap;
             .card-Box {
                 width: 180px;
-                height: 320px;
+                height: 275px;
             
             }
         }
@@ -757,6 +861,13 @@ height: 120px;
         }
         .projct {
             font-size: 15px;
+        }
+      }
+      .features {
+        .some{
+            .made {
+                font-size: 30px;
+            }
         }
       }
 }
@@ -801,6 +912,13 @@ height: 120px;
         }
         .projct {
             font-size: 12px;
+        }
+    }
+    .features {
+        .some {
+            .made {
+                font-size: 35px;
+            }
         }
     }
 }
