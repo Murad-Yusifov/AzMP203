@@ -3,3 +3,177 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container {
+    @include ajusting;
+    header {
+        width: $w;
+        height: 80px;
+        @include jc-and-al-it($jc:space-between);
+        gap: 2px;
+        padding: 0 80px;
+        .fa-bars {
+            display: none;
+        }
+        .logo {
+            width: 80px;
+            cursor: pointer;
+            .fa-solid {
+                width: 20%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        label {
+            width: 45%;
+            height: 60%;
+            border: 1px solid $main-color2      ;
+            border-radius: 30px;
+            @include jc-and-al-it($jc:start, $al-it:center);
+            gap: 20px;
+            padding: 0 20px;
+            .fa-solid {
+                font-size: 20px;
+                color: $main-color2;
+            }
+            input {
+                border: none;
+                outline: none;
+                font-size: 18px;
+
+            }
+        }
+    
+        .location {
+            @include jc-and-al-it;
+            gap: 10px;
+            width: 20%;
+            cursor: pointer;
+            .fa-solid {
+                color: $main-color2;
+                font-size: 25px;
+
+            }
+            .adress {
+                text-decoration: underline;               
+                color: $main-color2;
+            }
+                hr {
+                    width: 8%;
+                    -webkit-transform:rotate(90deg);
+
+                }
+            
+        }
+        .shopping {
+            .fa-solid {
+            display: none;
+        }
+        }
+        
+         .cart {
+            @include jc-and-al-it;
+            gap: 25px;
+            cursor: pointer;
+            .fa-solid {
+                color: $main-color2;
+                font-size: 25px;
+                font-weight: 600;
+                 cursor: pointer;
+
+            }
+         .account {
+            @include jc-and-al-it($jc:space-around);
+            gap: 20px;
+            width: 80%;
+            .fa-user {
+                color: $main-color2;
+                font-size: 25px;
+                width: 20%;
+                padding-right: 10px;
+                 cursor: pointer;
+            }
+            .bank {
+                width: 80%;
+                padding-top: 5px;
+                .bee {
+                    font-size: 14px;
+                }
+                .subscribe {
+                    font-size: 14px;
+                    text-decoration: underline;
+                    color: $main-color2;
+                }
+            }
+         }
+    }
+}
+}
+
+@media screen and (min-width: 300px) and (max-width:576px) {
+     .container {
+        width: $w;
+           header {
+            @include ajusting($jc:space-around,$flex-d:row);
+            width: 100%;
+            padding: 0;
+        .logo {
+            display: none;
+        }
+        label {
+            width: 60%;
+            height: 45%;
+            @include jc-and-al-it($jc:space-around);
+            gap: 5px;
+            overflow: hidden;
+
+            .fa-solid {
+                font-size: 15px;
+                flex-shrink: 0;
+            }
+            input {
+                font-size: 14px;
+            text-overflow: ellipsis
+            }
+        }
+        .location {
+            display: none;
+        }
+        .shopping {
+            @include centered;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid $main-color2;
+            cursor: pointer;
+            .fa-solid {
+                display: block;
+               
+                font-size: 20px;
+                color: $main-color2;
+                font-size: 20px;
+              
+                text-align: center;
+               
+    
+            }
+
+        }
+     
+       
+        .fa-bars {
+            display: block;
+            color: black;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .cart {
+            display: none;
+            .fa-solid {
+                display: block;
+            }
+        }
+        }
+    }    
+}

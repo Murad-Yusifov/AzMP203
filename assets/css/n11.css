@@ -3,3 +3,187 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  padding: 0 80px;
+}
+.container header .fa-bars {
+  display: none;
+}
+.container header .logo {
+  width: 80px;
+  cursor: pointer;
+}
+.container header .logo .fa-solid {
+  width: 20%;
+}
+.container header .logo img {
+  width: 100%;
+  height: 100%;
+}
+.container header label {
+  width: 45%;
+  height: 60%;
+  border: 1px solid #5D3EBC;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+.container header label .fa-solid {
+  font-size: 20px;
+  color: #5D3EBC;
+}
+.container header label input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.container header .location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 20%;
+  cursor: pointer;
+}
+.container header .location .fa-solid {
+  color: #5D3EBC;
+  font-size: 25px;
+}
+.container header .location .adress {
+  text-decoration: underline;
+  color: #5D3EBC;
+}
+.container header .location hr {
+  width: 8%;
+  -webkit-transform: rotate(90deg);
+}
+.container header .shopping .fa-solid {
+  display: none;
+}
+.container header .cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  cursor: pointer;
+}
+.container header .cart .fa-solid {
+  color: #5D3EBC;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.container header .cart .account {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+.container header .cart .account .fa-user {
+  color: #5D3EBC;
+  font-size: 25px;
+  width: 20%;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.container header .cart .account .bank {
+  width: 80%;
+  padding-top: 5px;
+}
+.container header .cart .account .bank .bee {
+  font-size: 14px;
+}
+.container header .cart .account .bank .subscribe {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #5D3EBC;
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  .container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  .container header .logo {
+    display: none;
+  }
+  .container header label {
+    width: 60%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+  }
+  .container header label .fa-solid {
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .container header label input {
+    font-size: 14px;
+    text-overflow: ellipsis;
+  }
+  .container header .location {
+    display: none;
+  }
+  .container header .shopping {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #5D3EBC;
+    cursor: pointer;
+  }
+  .container header .shopping .fa-solid {
+    display: block;
+    font-size: 20px;
+    color: #5D3EBC;
+    font-size: 20px;
+    text-align: center;
+  }
+  .container header .fa-bars {
+    display: block;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .container header .cart {
+    display: none;
+  }
+  .container header .cart .fa-solid {
+    display: block;
+  }
+}
