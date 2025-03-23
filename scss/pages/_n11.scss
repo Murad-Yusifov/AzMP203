@@ -5,6 +5,8 @@
 }
 .container {
     @include ajusting;
+    width: $w;
+    height: $h;
     header {
         width: $w;
         height: 80px;
@@ -109,11 +111,86 @@
          }
     }
 }
+.row-bar {
+    width: $w;
+    height: 60px;
+    @include jc-and-al-it($al-it:center);
+    text-align: center;
+    background-color: #F6F7F9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    span {
+        width: 100px;
+        height: 80%;
+        @include ajusting($jc:center);
+        font-size: 12px;
+        transition: .1s;
+        padding-bottom: 5px;
+    }
+    span:hover {
+        border-bottom: 3px solid $main-color2;
+        transition: .1s;
+    }
+    .item0 {
+        display: none;
+    }
+    .item1 {
+        display: none;
+    }
+    .item2 {
+        display: none;
+    }
+    .item3 {
+        display: none;
+    }
+    .item4 {
+        display: none;
+    }
+    .item5 {
+        display: none;
+    }
+    .item6 {
+        display: none;
+    }
+    .item7 {
+        display: none;
+    }
+    .item8 {
+        display: none;
+    }
+}
+.middle {
+    width: $w;
+    height: $h;
+    @include ajusting;
+    .img-Box {
+        width: 90%;
+        height: 100%;
+        img {
+            width: $w;
+            height: $w;
+            border-radius: 10px;
+        }
+    }
+}
+.signIn {
+    display: none;
+}
 }
 
 @media screen and (min-width: 300px) and (max-width:576px) {
      .container {
         width: $w;
+        @include ajusting;
+        .logo1 {
+            width: $w;
+            text-align: center;
+            
+            img {
+                width: 60px;
+            }
+        }
            header {
             @include ajusting($jc:space-around,$flex-d:row);
             width: 100%;
@@ -122,7 +199,7 @@
             display: none;
         }
         label {
-            width: 60%;
+            width: 70%;
             height: 45%;
             @include jc-and-al-it($jc:space-around);
             gap: 5px;
@@ -134,7 +211,7 @@
             }
             input {
                 font-size: 14px;
-            text-overflow: ellipsis
+            text-overflow: ellipsis;
             }
         }
         .location {
@@ -153,10 +230,7 @@
                 font-size: 20px;
                 color: $main-color2;
                 font-size: 20px;
-              
                 text-align: center;
-               
-    
             }
 
         }
@@ -174,6 +248,128 @@
                 display: block;
             }
         }
+        }   
+        .row-bar {
+            display: none;
         }
-    }    
+        .signIn {
+            display: block;
+            width: $w;
+            padding-left: 20px;
+            padding-bottom: 15px;
+            span {
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .fa-bolt {
+                color: $main-color;
+            }
+            a {
+                font-weight: 600;
+                text-decoration: none;
+                span {
+                    color: $main-color2;
+                }
+            }
+        }
+        .middle {
+            .img-Box {
+                width: $w;
+                height: 20%;
+                img {
+                    height: $w;
+                border-radius: 0;
+                }
+            }
+        }
+      
+     }
+   
+    }
+    @media screen and (min-width: 301px) and (max-width:760px) {
+        .container {
+            .middle {
+                width: $w;
+                .img-Box {
+                    height: 70%;
+                    width: $w;
+                    img{
+                        height: $w;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+
+@media screen and (min-width: 576px) and  (max-width: 996px) {
+    .container {
+        @include ajusting; 
+        .logo1 {
+            width:  80px;
+            text-align: center;
+            img {
+                width: 100%;
+            }
+        }
+       header {
+        @include jc-and-al-it($jc:center);
+        gap: 10px;
+        padding: 0;
+        .logo {
+            display: none;
+        }
+        .fa-bars {
+            display: block;
+            font-size: 30px;
+        }
+       .location {
+        display: none;
+        .fa-solid {
+            display: none;
+        }
+        .loc-text {
+            display: none;
+        }
+       } 
+       .cart {
+        display: none;
+        .fa-solid {
+            display: none;
+        }
+    }
+    label {
+        width: 80%;
+    }
+    .shopping {
+        @include ajusting($jc:center);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid $main-color2;
+        .fa-solid {
+            display: block;
+            font-size: 25px;
+            color: $main-color2
+        }
+    }
+    }
+    .row-bar {
+        display: none;
+    }
+    .signIn {
+        display: block;
+        width: $w;
+        padding:20px;
+        padding-top: 0;
+        .fa-bolt {
+                color: $main-color;
+            }
+            a {
+                text-decoration: none;
+                font-weight: bold   ;
+            }
+    }
+}
+
 }

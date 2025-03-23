@@ -9,6 +9,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 .container header {
   width: 100%;
@@ -120,10 +122,95 @@
   text-decoration: underline;
   color: #5D3EBC;
 }
+.container .row-bar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #F6F7F9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container .row-bar span {
+  width: 100px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  transition: 0.1s;
+  padding-bottom: 5px;
+}
+.container .row-bar span:hover {
+  border-bottom: 3px solid #5D3EBC;
+  transition: 0.1s;
+}
+.container .row-bar .item0 {
+  display: none;
+}
+.container .row-bar .item1 {
+  display: none;
+}
+.container .row-bar .item2 {
+  display: none;
+}
+.container .row-bar .item3 {
+  display: none;
+}
+.container .row-bar .item4 {
+  display: none;
+}
+.container .row-bar .item5 {
+  display: none;
+}
+.container .row-bar .item6 {
+  display: none;
+}
+.container .row-bar .item7 {
+  display: none;
+}
+.container .row-bar .item8 {
+  display: none;
+}
+.container .middle {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .middle .img-Box {
+  width: 90%;
+  height: 100%;
+}
+.container .middle .img-Box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.container .signIn {
+  display: none;
+}
 
 @media screen and (min-width: 300px) and (max-width: 576px) {
   .container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .logo1 {
+    width: 100%;
+    text-align: center;
+  }
+  .container .logo1 img {
+    width: 60px;
   }
   .container header {
     display: flex;
@@ -137,7 +224,7 @@
     display: none;
   }
   .container header label {
-    width: 60%;
+    width: 70%;
     height: 45%;
     display: flex;
     flex-direction: row;
@@ -185,5 +272,128 @@
   }
   .container header .cart .fa-solid {
     display: block;
+  }
+  .container .row-bar {
+    display: none;
+  }
+  .container .signIn {
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 15px;
+  }
+  .container .signIn span {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .container .signIn .fa-bolt {
+    color: #FAB700;
+  }
+  .container .signIn a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .container .signIn a span {
+    color: #5D3EBC;
+  }
+  .container .middle .img-Box {
+    width: 100%;
+    height: 20%;
+  }
+  .container .middle .img-Box img {
+    height: 100%;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 760px) {
+  .container .middle {
+    width: 100%;
+  }
+  .container .middle .img-Box {
+    height: 70%;
+    width: 100%;
+  }
+  .container .middle .img-Box img {
+    height: 100%;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 996px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .logo1 {
+    width: 80px;
+    text-align: center;
+  }
+  .container .logo1 img {
+    width: 100%;
+  }
+  .container header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+  }
+  .container header .logo {
+    display: none;
+  }
+  .container header .fa-bars {
+    display: block;
+    font-size: 30px;
+  }
+  .container header .location {
+    display: none;
+  }
+  .container header .location .fa-solid {
+    display: none;
+  }
+  .container header .location .loc-text {
+    display: none;
+  }
+  .container header .cart {
+    display: none;
+  }
+  .container header .cart .fa-solid {
+    display: none;
+  }
+  .container header label {
+    width: 80%;
+  }
+  .container header .shopping {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #5D3EBC;
+  }
+  .container header .shopping .fa-solid {
+    display: block;
+    font-size: 25px;
+    color: #5D3EBC;
+  }
+  .container .row-bar {
+    display: none;
+  }
+  .container .signIn {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+  }
+  .container .signIn .fa-bolt {
+    color: #FAB700;
+  }
+  .container .signIn a {
+    text-decoration: none;
+    font-weight: bold;
   }
 }
