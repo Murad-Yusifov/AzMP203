@@ -142,53 +142,30 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
   text-align: center;
   background-color: #F6F7F9;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  list-style: none;
 }
-.container nav .row-bar span {
-  width: 100px;
-  height: 80%;
+.container nav .row-bar li {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  gap: 3px;
+  text-align: center;
   font-size: 12px;
   transition: 0.1s;
   padding-bottom: 5px;
   cursor: pointer;
 }
-.container nav .row-bar span:hover {
+.container nav .row-bar li img {
+  width: 30px;
+  height: 30px;
+}
+.container nav .row-bar li:hover {
   border-bottom: 3px solid #5D3EBC;
   transition: 0.1s;
-}
-.container nav .row-bar .item0 {
-  display: none;
-}
-.container nav .row-bar .item1 {
-  display: none;
-}
-.container nav .row-bar .item2 {
-  display: none;
-}
-.container nav .row-bar .item3 {
-  display: none;
-}
-.container nav .row-bar .item4 {
-  display: none;
-}
-.container nav .row-bar .item5 {
-  display: none;
-}
-.container nav .row-bar .item6 {
-  display: none;
-}
-.container nav .row-bar .item7 {
-  display: none;
-}
-.container nav .row-bar .item8 {
-  display: none;
 }
 .container .middle {
   width: 100%;
@@ -255,32 +232,115 @@
 }
 .products .card-container {
   width: 100%;
-}
-.products .card-container .cards {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.products .card-container .cards .card1 {
-  width: 300px;
-  height: 400px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
+}
+.products .card-container .cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.products .card-container .cards .card1 {
+  width: 200px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
 }
 .products .card-container .cards .card1 .vacuum {
   width: 100%;
   text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.products .card-container .cards .card1 .vacuum .shampoo {
+  width: 90%;
+  height: 90%;
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.products .card-container .cards .card1 .vacuum .add1 {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.products .card-container .cards .card1 .vacuum .add2 {
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  top: 70px;
+  left: 10px;
 }
 .products .card-container .cards .card1 .vacuum p {
   color: #5D3EBC;
   font-weight: 900;
+  font-size: 12px;
+}
+.products .card-container .cards .card1 .vacuum:hover .shampoo {
+  border: none;
+  transition: 0.4s;
+}
+.products .card-container .cards .card1 .text-Box {
+  width: 90%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  cursor: pointer;
+  column-gap: 5px;
+}
+.products .card-container .cards .card1 .text-Box span {
+  font-size: 14px;
+}
+.products .card-container .cards .card1 .text-Box .stats {
+  color: #FAB700;
+  font-size: 14px;
+}
+.products .card-container .cards .card1 .text-Box .stats span {
+  color: rgb(162, 162, 162);
+}
+.products .card-container .cards .card1 .price {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  cursor: pointer;
+}
+.products .card-container .cards .card1 .price .real-price {
+  font-size: 14px;
+  color: rgb(146, 145, 145);
+  text-decoration: line-through;
+}
+.products .card-container .cards .card1 .price span {
   font-size: 18px;
+}
+.products .purple-row-container {
+  width: 90%;
+  height: 100px;
+  background-color: #5D3EBC;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 20px;
+}
+.products .purple-row-container span {
+  font-size: 30px;
+  color: white;
 }
 
 @media screen and (min-width: 300px) and (max-width: 576px) {
@@ -404,9 +464,10 @@
     height: 40px;
   }
 }
-@media screen and (min-width: 301px) and (max-width: 760px) {
+@media screen and (min-width: 301px) and (max-width: 768px) {
   .container .middle {
     width: 100%;
+    height: 60%;
   }
   .container .middle .img-Box {
     height: 70%;
@@ -416,8 +477,51 @@
     height: 100%;
     border-radius: 0;
   }
+  .container .products .echo .items img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .card-container {
+    height: 80%;
+  }
+  .container .card-container .cards .card1 {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container .card-container .cards .card1 .vacuum {
+    height: 100px;
+  }
+  .container .card-container .cards .card1 .vacuum .shampoo {
+    width: 90px;
+  }
+  .container .card-container .cards .card1 .vacuum .stats i {
+    font-size: 10px;
+  }
+  .container .card-container .cards .card1 .vacuum .add1 {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+  }
+  .container .card-container .cards .card1 .vacuum .add2 {
+    position: absolute;
+    top: 30px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+  }
+  .container .card-container .cards .card1 .vacuum p {
+    font-size: 5px;
+  }
+  .container .card-container .cards .card1 .text-Box span {
+    font-size: 10px;
+  }
 }
-@media screen and (min-width: 576px) and (max-width: 1020px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -496,14 +600,54 @@
     text-decoration: none;
     font-weight: bold;
   }
+  .container .middle .img-Box {
+    width: 100%;
+    height: 80%;
+  }
   .container .middle .products .echo .items img {
     width: 100%;
     height: 100%;
   }
+  .products .card-container .cards .card1 {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .products .card-container .cards .card1 .vacuum {
+    height: 100px;
+  }
+  .products .card-container .cards .card1 .vacuum .shampoo {
+    width: 90px;
+  }
+  .products .card-container .cards .card1 .vacuum .add1 {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+  }
+  .products .card-container .cards .card1 .vacuum .add2 {
+    position: absolute;
+    top: 40px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+  }
+  .products .card-container .cards .card1 .vacuum p {
+    font-size: 10px;
+  }
+  .products .card-container .cards .card1 .text-Box span {
+    font-size: 10px;
+  }
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 992px) {
   .container .middle .img-Box {
     width: 80%;
     height: 100%;
+  }
+  .purple-row-container {
+    height: 200px;
   }
 }
