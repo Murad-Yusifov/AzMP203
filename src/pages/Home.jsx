@@ -9,6 +9,7 @@ const Home = () => {
     const handleSend =()=>{
         setName(input)
         setInput("")
+        
     }
 
     return (
